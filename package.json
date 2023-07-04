@@ -1,4 +1,5 @@
 {
+  "name": "chat",
   "private": true,
   "author": "chenliang <Winning@123>",
   "scripts": {
