@@ -1,5 +1,5 @@
-let qiankun_state: any;
-let qiankun_props: any;
+let qiankunProps: any;
+let qiankunState: any;
 let listener: Function;
 
 export const lifeCycles = {
@@ -19,11 +19,12 @@ export const lifeCycles = {
 		console.log("-> micro-app-chat mount", props);
 		//  监听qiankun initState
 		props.onGlobalStateChange((state: any, prev: any) => {
-			qiankun_state = state
+			console.log("-> onGlobalStateChange", state, prev);
+			qiankunState = state
 			//  简单实现个订阅
 			listener?.(state, prev)
 		})
-		qiankun_props = props
+		qiankunProps = props
 	},
 	/**
 	 * 应用卸载之后触发
@@ -41,20 +42,14 @@ export const lifeCycles = {
 	}
 };
 
-function getGlobalProps() {
-	return qiankun_props
+export function getGlobalProps() {
+	return qiankunProps
 }
 
-function getGlobalState() {
-	return qiankun_state
+export function getGlobalState() {
+	return qiankunState
 }
 
-function addListener(func: Function) {
+export function addListener(func: Function) {
 	listener = func
-}
-
-export default {
-	getGlobalState,
-	getGlobalProps,
-	addListener
 }
