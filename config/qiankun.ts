@@ -1,5 +1,5 @@
 export default {
   slave: {
-    // container: '#app-chat',
+    container: '#app-chat',
   },
 };
