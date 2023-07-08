@@ -3,18 +3,10 @@
  */
 const routes = [
   {
-    path: '/',
-    redirect: '/demo',
-  },
-  {
     name: 'demo',
     path: '/demo',
-    component: './Demo',
+    component: './demo',
   },
-  // {
-  //   path: "/*",
-  //   component: "./404",
-  // },
 ];
 
 export default routes;
