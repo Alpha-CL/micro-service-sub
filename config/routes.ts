@@ -5,7 +5,7 @@ const routes = [
   {
     name: 'demo',
     path: '/demo',
-    component: './demo',
+    component: '@/pages/demo',
   },
 ];
 
