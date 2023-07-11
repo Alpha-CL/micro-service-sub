@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import classNames from "classnames";
 
 export interface DemoProps {
@@ -6,11 +6,30 @@ export interface DemoProps {
 }
 
 const Demo: React.FC<DemoProps> = (props: DemoProps) => {
+  console.log('-> window', window);
+  console.log('-> wujie', window.$wujie);
+
+  const {
+    bus,
+    location,
+    props: AppProps = {},
+    shadowRoot,
+  } = window.$wujie || {};
+
+  const { test } = AppProps;
+
+  useEffect(() => {
+    console.log('-> test', test);
+  }, []);
+
   return (
     <React.Fragment>
-      DemoComp
+      MicroServiceSubApp
       {props.children}
       props: {JSON.stringify(props)}
+      <br />
+      AppProps: {JSON.stringify(AppProps)}
+      <br />
       <br />
     </React.Fragment>
   );
