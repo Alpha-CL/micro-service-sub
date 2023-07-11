@@ -1394,6 +1394,13 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@babel/runtime@^7.18.6":
+  version "7.22.6"
+  resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.22.6.tgz#57d64b9ae3cff1d67eb067ae117dac087f5bd438"
+  integrity sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ==
+  dependencies:
+    regenerator-runtime "^0.13.11"
+
 "@babel/template@^7.20.7", "@babel/template@^7.22.5", "@babel/template@^7.3.3":
   version "7.22.5"
   resolved "https://registry.npmmirror.com/@babel/template/-/template-7.22.5.tgz#0c8c4d944509875849bd0344ff0050756eefc6ec"
@@ -9840,6 +9847,13 @@ write-file-atomic@^5.0.1:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^4.0.1"
+
+wujie@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.npmmirror.com/wujie/-/wujie-1.0.18.tgz#b1e45f2c8ecef842b0a978ed2502b74487e8a4a9"
+  integrity sha512-5/x2TRgJ9+6nHcHv7rmBWBKm3W49uDBOc1rzrQHxKPUCRscoHR8OQd1MCcoKDv1687CHNUTkODMyCIDktRl2ag==
+  dependencies:
+    "@babel/runtime" "^7.18.6"
 
 xtend@^4.0.0:
   version "4.0.2"
